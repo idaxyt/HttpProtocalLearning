@@ -4,7 +4,7 @@ import * as fs from "fs"
 
 http.createServer(function(request,response) {
 
-    const html = fs.readFileSync('src/index.html')
+    const html = fs.readFileSync('src/index.html','utf-8')
     response.writeHead(200, {
         'Content-type': 'text/html'
     })
