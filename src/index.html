@@ -11,9 +11,12 @@
 <body>
 </body>
 <script>
-    var xhr = new XMLHttpRequest()
-    xhr.open('GET', "http://127.0.0.1:9001/")
-    xhr.send()
+    fetch("http://127.0.0.1:9001/", {
+            method: "POST"
+        })
+        // var xhr = new XMLHttpRequest()
+        // xhr.open('POST', "http://127.0.0.1:9001/")
+        // xhr.send()
 </script>
 
 </html>
