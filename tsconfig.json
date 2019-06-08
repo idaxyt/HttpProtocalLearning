@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "esnext",
+        "sourceMap": true,
+        "outDir": "dist",
+        "declaration": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "preserveConstEnums": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
