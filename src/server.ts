@@ -1,10 +1,14 @@
 // >>> 引入http先安装node ### yarn add @types/node
-const http = require('http')
+import * as http from "http"
+import * as fs from "fs"
 
 http.createServer(function(request,response) {
-    console.log("request come",request.url)
 
-    response.end("hello, ida")
+    const html = fs.readFileSync('src/index.html')
+    response.writeHead(200, {
+        'Content-type': 'text/html'
+    })
+    response.end(html)
 }).listen(9000) // 客户端访问端口号
 
 console.log('server listening on 9000')
