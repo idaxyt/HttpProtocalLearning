@@ -1,3 +1,5 @@
+// >>> 只能发送get请求，不支持post put delete
+// >>> 不安全 xss攻击
 function jsonp({url,parmas,cb}) {
     return new Promise((resolve,reject) => {
         let script = document.createElement("script")

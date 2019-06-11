@@ -8,6 +8,17 @@
 </head>
 
 <body>
+    <!-- jsonp函数封装 -->
     <script src='../../../dist/jsonp/jsonp.js'></script>
+    <!-- 本地运行之前后端分离-前端代码 -->
+    <script>
+        function handleRes(data){ 
+            console.log(data)
+            document.body.removeChild(script)
+        }
+        let script = document.createElement("script")
+        script.src = "http://127.0.0.1:9002?callback=handleRes"
+        document.body.appendChild(script)
+    </script>
 </body>
 </html>
