@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    // fetch("http://127.0.0.1:9001/", {
+    //         method: "POST"
+    //     })
+    var xhr = new XMLHttpRequest()
+    xhr.open('GET', "http://127.0.0.1:9001/",true)
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState === 4) {
+            if(xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+                console.log(xhr.response)
+            }
+        }
+    }
+    xhr.send()
+</script>
+
+</html>
